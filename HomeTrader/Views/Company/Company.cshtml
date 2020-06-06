@@ -1,0 +1,25 @@
+﻿@model HomeTrader.Models.Company.CompaniesListViewModel
+
+@{
+    ViewData["Title"] = "Company";
+}
+
+<h1>Company</h1>
+
+<table class="table table-hover" >
+    <tbody>
+        @foreach (var company in Model.Companies)
+        {
+            <tr>
+                <td>
+                    <a asp-controller="Company" asp-action="Index">
+                        @company.Name
+                    </a>
+                </td>
+                <td>
+                    @company.Index
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
