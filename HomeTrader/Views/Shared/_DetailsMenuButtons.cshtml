@@ -1,0 +1,18 @@
+﻿@model int
+
+<div class="col-2">
+    <a asp-area="" asp-controller="Details" asp-action="Index" class="btn btn-secondary btn-sm">Działalność spółki</a>
+</div>
+<div class="col-2">
+    <a asp-area="" asp-controller="Details" asp-action="" class="btn btn-secondary btn-sm">Wskaźniki</a>
+</div>
+<div class="col-2">
+    <a asp-area="" asp-controller="Details" asp-action="" asp-route-id="@Model" class="btn btn-secondary btn-sm">Przepływy</a>
+</div>
+<div class="col-2">
+    <a asp-area="" asp-controller="Details" asp-action="" asp-route-id="@Model" class="btn btn-secondary btn-sm">Balans</a>
+</div>
+<div class="col-2">
+    <a asp-area="" asp-controller="Details" asp-action="" asp-route-id="@Model" class="btn btn-secondary btn-sm">Zysk/strata</a>
+</div>
+

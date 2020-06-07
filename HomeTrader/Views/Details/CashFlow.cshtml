@@ -1,0 +1,66 @@
+﻿@model HomeTrader.Models.FinanceVM.CashFlowVM
+@{
+    ViewData["Title"] = "CashFlow";
+}
+
+<h6>Przepływy</h6>
+<br />
+<div class="row">
+    <partial name="_DetailsMenuButtons" />
+</div>
+<br />
+<div class="border-bottom border-white shadow rounded-lg" style="background-color: #ededed">
+    <div class="row">
+        <div class="col-6">
+            <h4 class="text">Przepływy gotówki </h4>
+            <h6>@Html.DisplayFor(m => m.CashFlowColumnDescription.ComapanyName)</h6>
+            <h6>@Html.DisplayFor(m => m.CashFlowColumnDescription.CompanyId)</h6>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="border-bottom border-white shadow rounded-lg" style="background-color: #ededed">
+    <table class="table table-striped border">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(m => m.CashFlowColumnDescription.RaportYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.CashFlowColumnDescription.PrzeplywyZDzialalnosciOperacyjnej)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.CashFlowColumnDescription.PrzeplywyZDzialalnosciInvestycyjnej)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.CashFlowColumnDescription.PrzeplywyZDzialalnosciFinansowej)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.CashFlowColumnDescription.PrzeplywyRazem)
+            </th>
+        </tr>
+        @foreach (var raport in Model.CashFlowRaports)
+        {
+            <tr>
+                <td align="center">
+                    @Html.DisplayFor(r => raport.RaportYear)
+                </td>
+                <td align="center">
+                    @Html.DisplayFor(r => raport.PrzeplywyZDzialalnosciOperacyjnej)
+                </td>
+                <td align="center">
+                    @Html.DisplayFor(r => raport.PrzeplywyZDzialalnosciInvestycyjnej)
+                </td>
+                <td align="center">
+                    @Html.DisplayFor(r => raport.PrzeplywyZDzialalnosciFinansowej)
+                </td>
+                <td align="center">
+                    @Html.DisplayFor(r => raport.PrzeplywyRazem)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+
