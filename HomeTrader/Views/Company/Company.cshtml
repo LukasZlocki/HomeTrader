@@ -2,24 +2,54 @@
 
 @{
     ViewData["Title"] = "Company";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Company</h1>
+<div class="row">
+    <partial name="_CompaniesMenuButtons" />
+</div>
 
-<table class="table table-hover" >
-    <tbody>
-        @foreach (var company in Model.Companies)
+<br />
+<div class="border-bottom border-white shadow rounded-lg" style="background-color: #ededed">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text">Spolki Gpw</h2>
+        </div>
+    </div>
+</div>
+<br />
+<div class="border-bottom border-white shadow rounded-lg" style="background-color: #ededed">
+    <table class="table table-striped border">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(m => m.CompaniesName.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.CompaniesName.Ticker)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.CompaniesName.Index)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.CompaniesName.ISIN)
+            </th>
+        </tr>
+        @foreach (var item in Model.Companies)
         {
             <tr>
                 <td>
-                    <a asp-controller="Company" asp-action="Index">
-                        @company.Name
-                    </a>
+                    @Html.DisplayFor(m => item.Name)
                 </td>
                 <td>
-                    @company.Index
+                    @Html.DisplayFor(m => item.Ticker)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.Index)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.ISIN)
                 </td>
             </tr>
         }
-    </tbody>
-</table>
+    </table>
+</div>

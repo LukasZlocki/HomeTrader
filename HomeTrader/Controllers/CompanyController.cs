@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using HomeTrader.Data;
-using HomeTrader.Data.Models.Companies;
+﻿using HomeTrader.Data;
 using HomeTrader.Models.Company;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,5 +23,15 @@ namespace HomeTrader.Controllers
 
             return View("Company",companiesListVM);
         }
+
+        public IActionResult IndexSort(int sortId)
+        {
+            CompaniesListViewModel companiesListVM = new CompaniesListViewModel() 
+            {
+                Companies = _companyService.SortCompaniesByIndex(sortId)
+            };
+            return View(companiesListVM);
+        }
+
     }
 }

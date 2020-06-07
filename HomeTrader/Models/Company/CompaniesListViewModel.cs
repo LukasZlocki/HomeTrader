@@ -9,5 +9,7 @@ namespace HomeTrader.Models.Company
     public class CompaniesListViewModel
     {
         public IEnumerable<GpwCompany> Companies { get; set; }
+       
+        public readonly GpwCompany CompaniesName = new GpwCompany();
     }
 }
