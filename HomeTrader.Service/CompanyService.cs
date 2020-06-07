@@ -1,9 +1,7 @@
 ﻿using HomeTrader.Data;
 using HomeTrader.Data.Models.Companies;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace HomeTrader.Service
 {

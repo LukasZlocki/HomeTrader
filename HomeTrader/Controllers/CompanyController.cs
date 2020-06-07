@@ -1,5 +1,5 @@
 ﻿using HomeTrader.Data;
-using HomeTrader.Models.Company;
+using HomeTrader.Models.CompanyVM;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HomeTrader.Controllers
@@ -13,6 +13,7 @@ namespace HomeTrader.Controllers
             _companyService = companyService;
         }
 
+        //GET - all companies
         public IActionResult Index()
         {
 
@@ -24,13 +25,15 @@ namespace HomeTrader.Controllers
             return View("Company",companiesListVM);
         }
 
-        public IActionResult IndexSort(int sortId)
+        // GET - Company by Wig Index
+        public IActionResult IndexSort(int id)
         {
-            CompaniesListViewModel companiesListVM = new CompaniesListViewModel() 
+            CompaniesListViewModel sortCompaniesListVM = new CompaniesListViewModel()
             {
-                Companies = _companyService.SortCompaniesByIndex(sortId)
+                Companies = _companyService.SortCompaniesByIndex(id)
             };
-            return View(companiesListVM);
+
+            return View("Company",sortCompaniesListVM); 
         }
 
     }

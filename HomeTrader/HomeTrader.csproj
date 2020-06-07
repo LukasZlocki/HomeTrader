@@ -19,4 +19,9 @@
     <ProjectReference Include="..\HomeTrader.Service\HomeTrader.Service.csproj" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Models\FinanceVM\" />
+  </ItemGroup>
+
 </Project>

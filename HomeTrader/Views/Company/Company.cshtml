@@ -1,4 +1,4 @@
-﻿@model HomeTrader.Models.Company.CompaniesListViewModel
+﻿@model HomeTrader.Models.CompanyVM.CompaniesListViewModel
 
 @{
     ViewData["Title"] = "Company";
@@ -34,20 +34,22 @@
                 @Html.DisplayNameFor(m => m.CompaniesName.ISIN)
             </th>
         </tr>
-        @foreach (var item in Model.Companies)
+        @foreach (var company in Model.Companies)
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(m => item.Name)
+                    <a asp-controller="Company" asp-action="GetCompany" asp-route-id="@company.Id">
+                        @Html.DisplayFor(m => company.Name)
+                    </a>
                 </td>
                 <td>
-                    @Html.DisplayFor(m => item.Ticker)
+                    @Html.DisplayFor(m => company.Ticker)
                 </td>
                 <td>
-                    @Html.DisplayFor(m => item.Index)
+                    @Html.DisplayFor(m => company.Index)
                 </td>
                 <td>
-                    @Html.DisplayFor(m => item.ISIN)
+                    @Html.DisplayFor(m => company.ISIN)
                 </td>
             </tr>
         }

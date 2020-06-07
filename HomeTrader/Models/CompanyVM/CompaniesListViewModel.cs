@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HomeTrader.Models.Company
+namespace HomeTrader.Models.CompanyVM
 {
     public class CompaniesListViewModel
     {
