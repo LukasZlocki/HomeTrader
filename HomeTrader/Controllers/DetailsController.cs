@@ -11,6 +11,7 @@ namespace HomeTrader.Controllers
     public class DetailsController : Controller
     {
         private readonly IFinance _financeService;
+       // private readonly ICompany _companyService;
 
         public DetailsController(IFinance financeService)
         {
@@ -18,9 +19,13 @@ namespace HomeTrader.Controllers
         }
 
         // GET - tutaj wypisac pobranie podstawowych danych o spolce
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
-            return View("Index");
+            var vm = new IndexVM()
+            {
+                Id = id
+        };
+            return View("Index",vm);
         }
 
         public IActionResult GetCashFlow(int id)

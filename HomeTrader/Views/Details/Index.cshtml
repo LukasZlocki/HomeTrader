@@ -1,13 +1,13 @@
-﻿
+﻿@model HomeTrader.Models.FinanceVM.IndexVM
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h6>Szczegoly spolki</h6>
+    <h6>Szczegoly spolki o ID : @Html.DisplayFor(m => m.Id)</h6>
 <br />
 <div class="row">
-    <partial name="_DetailsMenuButtons" />
+    <partial name="_DetailsMenuButtons" model="@Model.Id" />
 </div>
 <br />
 
