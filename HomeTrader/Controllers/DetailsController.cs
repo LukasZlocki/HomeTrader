@@ -39,5 +39,16 @@ namespace HomeTrader.Controllers
             return View("CashFlow", CashFlowRaportVM);
         }
 
+        public IActionResult GetBalance(int id)
+        {
+            BalanceVM BalanceRaportVM = new BalanceVM
+            {
+                CompanyId = id,
+                BalanceRaports = _financeService.GetBalanceRaportsByCompanyId(id)
+            };
+
+            return View("Balance", BalanceRaportVM);
+        }
+
     }
 }

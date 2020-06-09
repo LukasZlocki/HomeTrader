@@ -1,0 +1,88 @@
+﻿@model HomeTrader.Models.DetailsVM.BalanceVM
+@{
+    ViewData["Title"] = "CashFlow";
+}
+
+<h6>Balans</h6>
+<br />
+<div class="row">
+    <partial name="_DetailsMenuButtons" model="@Model.CompanyId" />
+</div>
+<br />
+<div class="border-bottom border-white shadow rounded-lg" style="background-color: #ededed">
+    <div class="row">
+        <div class="col-6">
+            <h6 class="text">Przepływy gotówki </h6>
+            <h6>@Html.DisplayFor(m => m.CompanyId)</h6>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="border-bottom border-white shadow rounded-lg" style="background-color: #ededed">
+    <table class="table table-striped border">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(m => m.BalanceColumnDescription.RaportYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.BalanceColumnDescription.AktywaTrwale)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.BalanceColumnDescription.AktywaObrotowe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.BalanceColumnDescription.AktywaRazem)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.BalanceColumnDescription.KapitalWlasnyAkcjonariuszyJednostkiDominujacej)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.BalanceColumnDescription.UdzialyNiekontrolujace)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.BalanceColumnDescription.ZobowiazaniaDlugoterminowe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.BalanceColumnDescription.ZobowiazaniaKrotkoterminowe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.BalanceColumnDescription.PasywaRazem)
+            </th>
+        </tr>
+        @foreach (var raport in Model.BalanceRaports)
+        {
+    <tr>
+        <td align="center">
+            @Html.DisplayFor(r => raport.RaportYear)
+        </td>
+        <td align="center">
+            @Html.DisplayFor(r => raport.AktywaTrwale)
+        </td>
+        <td align="center">
+            @Html.DisplayFor(r => raport.AktywaObrotowe)
+        </td>
+        <td align="center">
+            @Html.DisplayFor(r => raport.AktywaRazem)
+        </td>
+        <td align="center">
+            @Html.DisplayFor(r => raport.KapitalWlasnyAkcjonariuszyJednostkiDominujacej)
+        </td>
+        <td align="center">
+            @Html.DisplayFor(r => raport.UdzialyNiekontrolujace)
+        </td>
+        <td align="center">
+            @Html.DisplayFor(r => raport.ZobowiazaniaDlugoterminowe)
+        </td>
+        <td align="center">
+            @Html.DisplayFor(r => raport.ZobowiazaniaKrotkoterminowe)
+        </td>
+        <td align="center">
+            @Html.DisplayFor(r => raport.PasywaRazem)
+        </td>
+    </tr>
+        }
+    </table>
+</div>
+
