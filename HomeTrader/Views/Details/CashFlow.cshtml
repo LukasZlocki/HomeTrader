@@ -1,4 +1,4 @@
-﻿@model HomeTrader.Models.FinanceVM.CashFlowVM
+﻿@model HomeTrader.Models.DetailsVM.CashFlowVM
 @{
     ViewData["Title"] = "CashFlow";
 }
@@ -6,15 +6,14 @@
 <h6>Przepływy</h6>
 <br />
 <div class="row">
-    <partial name="_DetailsMenuButtons" />
+    <partial name="_DetailsMenuButtons" model="@Model.CompanyId"/>
 </div>
 <br />
 <div class="border-bottom border-white shadow rounded-lg" style="background-color: #ededed">
     <div class="row">
         <div class="col-6">
-            <h4 class="text">Przepływy gotówki </h4>
-            <h6>@Html.DisplayFor(m => m.CashFlowColumnDescription.ComapanyName)</h6>
-            <h6>@Html.DisplayFor(m => m.CashFlowColumnDescription.CompanyId)</h6>
+            <h6 class="text">Przepływy gotówki </h6>
+            <h6>@Html.DisplayFor(m => m.CompanyId)</h6>
         </div>
     </div>
 </div>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using HomeTrader.Data;
-using HomeTrader.Models.FinanceVM;
+using HomeTrader.Models.DetailsVM;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HomeTrader.Controllers
@@ -32,6 +32,7 @@ namespace HomeTrader.Controllers
         {
             CashFlowVM CashFlowRaportVM = new CashFlowVM()
             {
+                CompanyId = id,
                 CashFlowRaports = _financeService.GetCashFlowRaportsByCompanyId(id)
             };
 
