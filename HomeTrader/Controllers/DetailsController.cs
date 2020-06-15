@@ -50,5 +50,16 @@ namespace HomeTrader.Controllers
             return View("Balance", BalanceRaportVM);
         }
 
+        public IActionResult GetProfitAndLose(int id)
+        {
+            ProfitAndLoseVM ProfitAndLoseRaportVM = new ProfitAndLoseVM
+            {
+                CompanyId = id,
+                ProfitAndLoseRaports = _financeService.GetProfitAndLoseRaportsByCompanyId(id)
+            };
+
+            return View("ProfitAndLose", ProfitAndLoseRaportVM);
+        }
+
     }
 }
