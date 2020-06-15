@@ -22,5 +22,8 @@ namespace HomeTrader.Data.Models.Companies
 
         [Display(Name = "ISIN")]
         public string ISIN { get; set; }
+
+        [Display(Name ="Opis działalności")]
+        public string CompanyDescription { get; set; }
     }
 }

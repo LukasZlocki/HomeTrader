@@ -4,11 +4,24 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <h6>Szczegoly spolki o ID : @Html.DisplayFor(m => m.Id)</h6>
+    <h6>Szczegoly spolki o ID : @Html.DisplayFor(m => m.CompanyId)</h6>
 <br />
 <div class="row">
-    <partial name="_DetailsMenuButtons" model="@Model.Id" />
+    <partial name="_DetailsMenuButtons" model="@Model.CompanyId" />
 </div>
 <br />
 
+<div>
+    <table>
+        <tr>
+            <th>
+                @Html.DisplayFor(c => c.Company.Id)
+            </th>
+            <th>
+                @Html.DisplayFor(c => c.Company.Index)
+            </th>
+        </tr>
+    </table>
+</div>
+>
 

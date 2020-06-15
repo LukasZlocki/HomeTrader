@@ -8,7 +8,7 @@ namespace HomeTrader.Models.DetailsVM
 {
     public class IndexVM
     {
-        public int Id { get; set; }
-        //public GpwCompany Company { get; set; }
+        public int CompanyId { get; set; }
+        public GpwCompany Company { get; set; }
     }
 }

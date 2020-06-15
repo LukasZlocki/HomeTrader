@@ -19,4 +19,9 @@
     <ProjectReference Include="..\HomeTrader.Service\HomeTrader.Service.csproj" />
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="Views\Index\" />
+  </ItemGroup>
+
 </Project>
