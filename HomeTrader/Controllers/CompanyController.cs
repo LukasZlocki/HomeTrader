@@ -38,16 +38,5 @@ namespace HomeTrader.Controllers
         }
 
 
-        public IActionResult Company(int id)
-        {
-            IndexVM CompanyInfoVM = new IndexVM
-            {
-                CompanyId = id,
-                Company = _companyService.GetCompanyById(id)
-
-            };
-            return View("Index", CompanyInfoVM);
-        }
-
     }
 }

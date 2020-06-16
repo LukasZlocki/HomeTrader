@@ -11,11 +11,13 @@ namespace HomeTrader.Controllers
     public class DetailsController : Controller
     {
         private readonly IFinance _financeService;
+        private readonly ICompany _companyService;
         
 
-        public DetailsController(IFinance financeService)
+        public DetailsController(IFinance financeService, ICompany companyService)
         {
             _financeService = financeService;
+            _companyService = companyService;
         }
 
         // GET - tutaj wypisac pobranie podstawowych danych o spolce
@@ -58,6 +60,18 @@ namespace HomeTrader.Controllers
             return View("ProfitAndLose", ProfitAndLoseRaportVM);
         }
 
+        // Company controller part
+
+        public IActionResult Company(int id)
+        {
+            IndexVM CompanyInfoVM = new IndexVM
+            {
+                CompanyId = id,
+                Company = _companyService.GetCompanyById(id)
+
+            };
+            return View("Index", CompanyInfoVM);
+        }
 
     }
 }
