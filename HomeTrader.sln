@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTrader", "HomeTrader\HomeTrader.csproj", "{77AF413E-39D6-4610-A46F-7029441AA9D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTrader.Web", "HomeTrader.Web\HomeTrader.Web.csproj", "{77AF413E-39D6-4610-A46F-7029441AA9D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTrader.Data", "HomeTrader.Data\HomeTrader.Data.csproj", "{52EAF416-E0BF-4332-9704-872CADF1BC17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTrader.Data", "HomeTrader.Data\HomeTrader.Data.csproj", "{52EAF416-E0BF-4332-9704-872CADF1BC17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeTrader.Service", "HomeTrader.Service\HomeTrader.Service.csproj", "{46774015-BDA6-4BA7-802A-8A761B2372A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeTrader.Service", "HomeTrader.Service\HomeTrader.Service.csproj", "{46774015-BDA6-4BA7-802A-8A761B2372A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
